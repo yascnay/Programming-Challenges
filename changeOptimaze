@@ -1,0 +1,32 @@
+def changeOptimized(number):
+    list_currency = [25,10,5,1]
+    if number>0 and number<100:
+         if number >= list_currency[0]:
+            quarter= number//list_currency[0]
+            number= number - (quarter*list_currency[0])
+         else:
+             quarter=0   
+         if number>= list_currency[1]:
+              dime= number//list_currency[1]
+              number= number - (dime*list_currency[1])
+         else:
+           dime = 0
+         if number> list_currency[2]:
+             nickel= number//list_currency[2]
+             number= number - (nickel*list_currency[2])
+         else:
+             nickel = 0 
+         if number> list_currency[3]:
+             penny= number//list_currency[3]
+             number= number - (penny*list_currency[3])
+         else:
+             penny = 0  
+
+    else:
+         number=0    
+     
+    return {"quarter":quarter,"dime": dime,"nickel":nickel,"penny":penny}
+
+print(changeOptimized(27))
+
+        

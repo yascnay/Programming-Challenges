@@ -1,0 +1,17 @@
+def changeOptimized(currency,number):
+    dict_change={}
+
+    if number>0 and number<100:
+        for coin in currency:
+            count = 0
+            while number >= coin:
+                number -= coin
+                count= count + 1
+            dict_change[coin]= count
+    return dict_change
+         
+
+list_currency = [25,10,5,1]
+print(changeOptimized(list_currency,83))
+
+        

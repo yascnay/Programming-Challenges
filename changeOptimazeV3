@@ -1,0 +1,19 @@
+def changeOptimized(currency,number):
+    sorted(currency,reverse=True)
+    dict_change={}
+
+    if number>0 and number<100:
+        for coin in currency:
+            if number >= coin:
+                count= number//coin
+                number -= (count*coin)
+            else:
+                count=0    
+            dict_change[coin]= count
+    return dict_change
+         
+
+list_currency = [25,10,5,1]
+print(changeOptimized(list_currency,83))
+
+        
